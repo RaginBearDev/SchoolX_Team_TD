@@ -16,7 +16,7 @@ public class cosmo_chel : MonoBehaviour
     {
         if (collision.collider.tag == "platform")
         {
-            Debug.Log("Hi");
+            Debug.Log("Wall! U can't go this way");
         }
     }
 
