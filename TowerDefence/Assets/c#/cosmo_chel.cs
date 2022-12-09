@@ -10,18 +10,19 @@ public class cosmo_chel : MonoBehaviour
     private bool FacingRight = true;
     public GameObject bullets;
 
+
     void Start()
     {
         chel = GetComponent<Transform>();
-        bullets = GameObject.FindWithTag("bullets");
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+   /* private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "platform")
         {
             Debug.Log("Wall! U can't go this way");
         }
-    }
+    }*/
 
     void Update()
     {
@@ -30,11 +31,11 @@ public class cosmo_chel : MonoBehaviour
         Vector3 moveVector = new Vector3(xAxis, yAxis, 0);
         chel.Translate(moveVector * speed * Time.deltaTime);
 
-        if(xAxis > 0 && FacingRight)
+        if (xAxis > 0 && FacingRight)
         {
             Flip();
         }
-        else if(xAxis < 0 && !FacingRight)
+        else if (xAxis < 0 && !FacingRight)
         {
             Flip();
         }
@@ -42,8 +43,8 @@ public class cosmo_chel : MonoBehaviour
 
     private void Flip()
     {
-        
-        FacingRight = !FacingRight; 
+
+        FacingRight = !FacingRight;
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;

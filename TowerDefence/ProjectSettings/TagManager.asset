@@ -9,6 +9,7 @@ TagManager:
   - bullets
   - gun
   - kirk
+  - sbor_mass
   layers:
   - Default
   - TransparentFX
