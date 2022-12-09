@@ -8,8 +8,8 @@ public class weapon : MonoBehaviour
 
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public bool vibor = true;
-    public GameObject kirk;
+        
+    
     
     
 
@@ -29,10 +29,5 @@ public class weapon : MonoBehaviour
     void Shoot() //shooting logic
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-    }
-
-    void Smena()
-    {
-
     }
 }

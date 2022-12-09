@@ -9,6 +9,7 @@ public class cosmo_chel : MonoBehaviour
     public Transform chel;
     private bool FacingRight = true;
     public GameObject bullets;
+    public GameObject[] array_of_objects = new GameObject[5];
 
 
     void Start()
@@ -39,6 +40,8 @@ public class cosmo_chel : MonoBehaviour
         {
             Flip();
         }
+
+        Smena();
     }
 
     private void Flip()
@@ -50,5 +53,20 @@ public class cosmo_chel : MonoBehaviour
         transform.localScale = theScale;
         bullets.transform.Rotate(0f, 180f, 0f);
 
+    }
+
+    void Smena()
+    {
+        if (Input.GetKeyDown("1"))
+        {
+            array_of_objects[0].gameObject.SetActive(true);
+            array_of_objects[1].gameObject.SetActive(false);
+        }
+        if (Input.GetKeyDown("2"))
+        {
+            array_of_objects[1].gameObject.SetActive(true);
+
+            array_of_objects[0].gameObject.SetActive(false);
+        }
     }
 }
