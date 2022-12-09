@@ -10,11 +10,14 @@ public class cosmo_chel : MonoBehaviour
     private bool FacingRight = true;
     public GameObject bullets;
     public GameObject[] array_of_objects = new GameObject[5];
-
+    
 
     void Start()
     {
+
         chel = GetComponent<Transform>();
+        
+
     }
 
    /* private void OnCollisionEnter2D(Collision2D collision)
@@ -54,9 +57,44 @@ public class cosmo_chel : MonoBehaviour
         bullets.transform.Rotate(0f, 180f, 0f);
 
     }
-
+    /*public int counter = 1;*/
     void Smena()
     {
+        // try to make switch with mouse scroll//
+
+        
+        /*if(Input.GetAxis("Mouse ScrollWheel") > 0)
+        {
+            while (counter < 3)
+            {
+                counter++;
+            }
+        }
+        if(Input.GetAxis("Mouse ScrollWhell") < 0)
+        {
+            while(counter > 1)
+            {
+                counter--;
+            }
+        }
+
+        if(counter == 1)
+        {
+            array_of_objects[0].gameObject.SetActive(false);
+            array_of_objects[1].gameObject.SetActive(false);
+        }
+        else if(counter == 2)
+        {
+            array_of_objects[0].gameObject.SetActive(true);
+            array_of_objects[1].gameObject.SetActive(false);
+        }
+        else if (counter == 3)
+        {
+            array_of_objects[0].gameObject.SetActive(false);
+            array_of_objects[1].gameObject.SetActive(true);
+        }*/
+
+        
         if (Input.GetKeyDown("1"))
         {
             array_of_objects[0].gameObject.SetActive(true);
@@ -67,6 +105,12 @@ public class cosmo_chel : MonoBehaviour
             array_of_objects[1].gameObject.SetActive(true);
 
             array_of_objects[0].gameObject.SetActive(false);
+        }
+        if (Input.GetKeyDown("3"))
+        {
+            array_of_objects[0].gameObject.SetActive(false);
+
+            array_of_objects[1].gameObject.SetActive(false);
         }
     }
 }
