@@ -51,9 +51,9 @@ public class cosmo_chel : MonoBehaviour
     {
 
         FacingRight = !FacingRight;
-        Vector3 theScale = transform.localScale;
+        Vector3 theScale = chel.transform.localScale;
         theScale.x *= -1;
-        transform.localScale = theScale;
+        chel.transform.localScale = theScale;
         bullets.transform.Rotate(0f, 180f, 0f);
 
     }
