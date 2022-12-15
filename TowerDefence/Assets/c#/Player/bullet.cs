@@ -6,8 +6,6 @@ public class bullet : MonoBehaviour
 {
     public float speed = 20f;
     public Rigidbody2D rb;
-
-    public int vkhp = 3;
     
     void Start()
     {
@@ -16,8 +14,7 @@ public class bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-
+        Debug.Log(hitInfo.name);
         Destroy(gameObject);
-        
     }
 }
