@@ -13,6 +13,7 @@ TagManager:
   - firepoint
   - viking
   - radius_kirka
+  - tree
   layers:
   - Default
   - TransparentFX

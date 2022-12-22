@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class viking : MonoBehaviour
 {
-    public double vik_hp = 3;
+    int vik_hp = 500;
     void Start()
     {
         
@@ -14,12 +14,12 @@ public class viking : MonoBehaviour
     {
         if (collision.tag == "firepoint")
         {
-            vik_hp -= 1;
+            vik_hp -= 100;
             Debug.Log(vik_hp);
         }
         if (collision.tag == "radius_kirka")
         {
-            vik_hp -= 0.5;
+            vik_hp -= 50;
             Debug.Log(vik_hp);
         }
     }

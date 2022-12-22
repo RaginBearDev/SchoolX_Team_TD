@@ -5,18 +5,22 @@ using UnityEngine;
 public class kirka : MonoBehaviour
 {
     public GameObject rad;
+    public CircleCollider2D rad1;
+    
+    
     void Start()
     {
-        rad = GameObject.FindGameObjectWithTag("radius_kirka");
-        
+
+        rad1 = rad.GetComponent<CircleCollider2D>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        rad.GetComponent<CircleCollider2D>().enabled = false;
-        if (Input.GetButtonDown("Fire1"))
+        rad.gameObject.SetActive(false);
+        //rad.GetComponent<CircleCollider2D>().enabled = false;
+        if (Input.GetKey(KeyCode.Mouse0))
         {
             Shoot();
         }
@@ -25,6 +29,6 @@ public class kirka : MonoBehaviour
     void Shoot()
     {
 
-        rad.GetComponent<CircleCollider2D>().enabled = true;
+        rad.gameObject.SetActive(true);
     }
 }
