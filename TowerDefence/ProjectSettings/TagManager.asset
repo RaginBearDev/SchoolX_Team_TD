@@ -10,6 +10,10 @@ TagManager:
   - gun
   - kirk
   - sbor_mass
+  - firepoint
+  - viking
+  - radius_kirka
+  - tree
   layers:
   - Default
   - TransparentFX
